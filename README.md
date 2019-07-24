@@ -17,6 +17,7 @@ e = unique hash (based in temporary id) to avoid corruption (in case of corrupti
 
 
 
+\n
 A(E(e)) --- Device verify(e)-(E-decrypt(E)-- O(F)   
 
 
