@@ -1,0 +1,9 @@
+#PoC
+a transferencia ocorre como um envio de dados (não modulada)
+ao reconhecer o dispositivo (Flaw, permite reconhecer metadados do user)
+(id) 
+(hash * cipher data)
+
+(Flaw, o pacote eh corrompido e não permite a perda de dados, diferente do arquivo de audio que permite a perda de dados minima
+quando o arquivo cifrado perde dados minimamente ele eh corrompido, para isso existe o hash, para verificar a saude do pacote,
+mas não impede que o pacote seja corrompido por poluição)
