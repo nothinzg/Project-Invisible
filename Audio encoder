@@ -1,0 +1,14 @@
+#PoC
+Estou trabalhando na implementação de audio baseado no codec ogg, o audio é almacenado no cache do device
+(utilizo a memoria flash 4mb para almacenar esse audio, caso seja superior, notifica)(esp32s)
+esse codec permite almacenar de forma livre, testei implementando https://tmrh20.github.io/RF24Audio/
+Rf24
+
+apos almacenar o audio, o arquivo final é cifrado com a chave publica almacenada do dispositivo que vai receber a mensagem
+Tambem recebe uma id unica e gera um hash (SHA-256) (using a hexa data)
+o id eh baseado em um numero randomico (pseudo) gerado pelo device, ou pode ser definido pelo usuario
+estrutura do pacote
+(id) #para reconhecer o envio de algum user
+(cypher data) 
+(hash) reconhece a saude do pacote
+
