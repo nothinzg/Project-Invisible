@@ -3,7 +3,30 @@ a transferencia ocorre como um envio de dados (não modulada)
 ao reconhecer o dispositivo (Flaw, permite reconhecer metadados do user)
 (id) 
 (hash * cipher data)
-
+|
+|     hash = h
+|     cipher data = cryptd
+|     id = user device id
+|    Ui = initial messsage user
+|
+|
+read.id 
+      if read.id != Ui.id ()x
+      read.id == Ui.id ()continue
+hash 
+(hibryd cache hash (size 120))
+                              if hash.Ui <= int(120)  ()x
+                             hash.Ui == int(120)
+ save hash ()
+ 
+ |
+ |
+ cryptd
+       hash signature.algorythm hash(if h != hash.Ui) ()x
+                                     h == hash.Ui 
+                                              original cryptd
+ 
+ 
 (Flaw, o pacote eh corrompido e não permite a perda de dados, diferente do arquivo de audio que permite a perda de dados minima
 quando o arquivo cifrado perde dados minimamente ele eh corrompido, para isso existe o hash, para verificar a saude do pacote,
 mas não impede que o pacote seja corrompido por poluição)
